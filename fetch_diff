@@ -1,9 +1,0 @@
-node{
-git credentialsId: 'cred id', url:    'ssh://git@git-repo:1234/app/mono-repo.git'
-ret = sh(script: 'git fetch; git diff origin/master remotes/origin/master | grep "folder-name"', returnStatus: true)
-    if(ret == 0){
-        doSomething()
-   }else{
-        doNothing()
-   }
-}
